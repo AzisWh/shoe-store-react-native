@@ -2,6 +2,10 @@
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
+## Figma Link
+
+   Figma Link : (https://www.figma.com/design/tW565jgV4MGd6m3IItJxIo/Mobile-App-UI-UX-Design--Community-?node-id=124-213&t=HEQkFS6v3xkl0KT2-0)
+
 ## Get started
 
 1. Install dependencies
