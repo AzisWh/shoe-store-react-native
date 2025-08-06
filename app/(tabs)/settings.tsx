@@ -3,8 +3,8 @@ import { StyleSheet, Text, View } from "react-native";
 
 const settings = () => {
   return (
-    <View>
-      <Text>settings</Text>
+    <View className="items-center justify-center flex-1 bg-white">
+      <Text className="text-black ">Settings</Text>
     </View>
   );
 };

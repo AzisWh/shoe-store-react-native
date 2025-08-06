@@ -3,8 +3,8 @@ import { StyleSheet, Text, View } from "react-native";
 
 const analytic = () => {
   return (
-    <View>
-      <Text>analytic</Text>
+    <View className="items-center justify-center flex-1 bg-white">
+      <Text className="text-black ">Analytic</Text>
     </View>
   );
 };

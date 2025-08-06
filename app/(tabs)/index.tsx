@@ -1,9 +1,16 @@
 import SearchBar from "@/components/SearchBar";
 import ShoeCard from "@/components/ShoeCard";
 import { icons } from "@/constants/icons";
-import { Image, ScrollView, Text, View } from "react-native";
+import { ShoeData } from "@/Data/ShoeData";
+import { useRouter } from "expo-router";
+import { FlatList, Image, ScrollView, Text, View } from "react-native";
 
 export default function HomeScreen() {
+  const router = useRouter();
+  const handlePress = (id: number) => {
+    // console.log("Klik item dengan id:", id);
+    router.push(`/detail/${id}`)
+  };
   return (
     <View className="flex-1 bg-white">
       <View className="flex flex-row justify-between px-5 mt-[50px]">
@@ -20,7 +27,20 @@ export default function HomeScreen() {
           <SearchBar placeholder={"Search for a shoe"} />
         </View>
         <View className="mt-10 ">
-          <ShoeCard />
+          <FlatList
+            // horizontal
+            scrollEnabled={false}
+            data={ShoeData}
+            keyExtractor={(item) => item.id.toString()}
+            numColumns={2}
+            columnWrapperStyle={{
+              justifyContent: "space-evenly",
+              marginBottom: 16,
+            }}
+            renderItem={({ item }) => (
+              <ShoeCard item={item} onPress={handlePress} />
+            )}
+          />
         </View>
       </ScrollView>
     </View>
